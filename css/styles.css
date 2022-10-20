@@ -102,8 +102,12 @@ header{
   color: white;
   height: 400px;                /* Parallax effect */
   /* Your code here */
+  min-height: 400px;
   /* Set background-image to header.jpg in the images folder */
+  background-color: #B3B3B3;
+  background-image: url('../images/header.jpg');
   /* Span one row */
+  grid-column: 1 / -1;
 }
 
 header p{
@@ -125,32 +129,43 @@ header p{
 .about, .method, .clients, .contact{
   /*Your code here */
   /* See documentation for mobile view */
+  grid-column: 2 / span 1;
+}
+
+img {
+  width: 100%;
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
    /*Your code here */
    /* See documentation for mobile view */
-
+   grid-column: 1 / -1;
+   max-height: 500px;
+   overflow: hidden;
 }
 
 .about, .about-image{
   /*Your code here */
   /* See documentation for mobile view */
+  grid-row: 3 / span 1;
 }
 
 .method, .method-image{
   /*Your code here */
   /* See documentation for mobile view */
+  grid-row: 4 / span 1;
 }
 
 .clients, .clients-image{
   /*Your code here */
   /* See documentation for mobile view */
+  grid-row: 5 / span 1;
 }
 
 .contact, .contact-image{
   /*Your code here */
   /* See documentation for mobile view */
+  grid-row: 6 / span 1;
 }
 
 .text-block{
@@ -161,6 +176,9 @@ header p{
   margin: auto;
   /*Your code here:*/
   /*Align the content in the center */
+  align-content: center;
+  max-height: 25vh;
+  overflow: auto;
 }
 
 @media all and (min-width: 800px){
