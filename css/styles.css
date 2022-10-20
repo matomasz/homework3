@@ -36,6 +36,7 @@ nav a{
 
 nav a:hover{
   text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
 .skip a{
@@ -176,16 +177,22 @@ img {
   margin: auto;
   /*Your code here:*/
   /*Align the content in the center */
-  align-content: center;
+  text-align: center;
   max-height: 25vh;
   overflow: auto;
 }
 
 @media all and (min-width: 800px){
 
+  .skip a:focus{
+    top: 20px;
+  }
+
   .container{
     /*Your code here */
     /* See documentation for desktop view */
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 70px repeat(5, 400px) 100px;
   }
 
   nav{
@@ -193,16 +200,20 @@ img {
     text-align: right;
     padding: 35px 0px;
     align-self: center;
+    margin-right: 0;
+    margin-left: auto;
   }
 
    .about, .clients, .method-image, .contact-image {
     /*Your code here */
     /* See documentation for desktop view */
+    grid-column: 3 / span 2;
   }
 
   .method, .contact, .about-image, .clients-image {
     /*Your code here */
     /* See documentation for desktop view */
+    grid-column: 2 / span 2;
   }
 }  /*End the media query*/
 
